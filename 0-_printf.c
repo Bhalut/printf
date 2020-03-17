@@ -7,40 +7,41 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int count = 0, i = 0, j, k;
+	int count = 0, i = 0, j, k = 0;
 
-	fmt st_format [] = {
-		{"%c", func_char},
-		{"%s", func_string},
-		{NULL, NULL}};
+	fmt st_format[] = {{"c", func_char}, {"s", func_string}, {NULL, NULL}};
 
 	va_start(list, format);
 	while (format && format[i] != 0)
 	{
 		if (format[i] != '%')
 		{
-		        _putchar(format[i]);
+			_putchar(format[i]);
 			count += 1;
 		}
 		else
 		{
 			j = 0;
-			k = 0;
-			while (st_format[j].fmt != NULL)
+			while (st_format[j].fmt)
 			{
-				if (format[i] == st_format[j].fmt[k] && format[i + 1] == st_format[j].fmt[k + 1])
+				if (format[i + 1] == '%')
+				{
+					count += func_percent();
+					i++;
+					break;
+				}
+				else if (format[i + 1] == st_format[j].fmt[k])
 				{
 					count += st_format[j].func(list);
-					_putchar('x');
+					i++;
+					break;
 				}
 				j++;
-				k++;
 			}
-			i++;
 		}
 		i++;
 	}
-	_putchar('\n');
+	iputchar('\n');
 	va_end(list);
 	return (count);
 }
