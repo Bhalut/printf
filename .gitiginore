@@ -132,7 +132,7 @@ tags
 
 
 ## Project ##
-/[Tt]est/
+./[Tt]est/*
 
 
 # End of https://www.gitignore.io/api/c,vim,emacs
