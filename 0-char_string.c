@@ -33,9 +33,10 @@ int func_char(va_list list)
 }
 /**
  * func_percent - print the sing percent
+ * @list: the list of arguments the funcion id receiving
  * Return: 1 as just one of character
  */
-int func_percent(__attribute__((unused))va_list list )
+int func_percent(__attribute__((unused)) va_list list)
 {
 	_putchar('%');
 	return (1);

@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_number - Prints an integer
- * @n: Number as a imput
- * Return: 0 Always
+ * func_digit - Prints an integer
+ * @list: the list of arguments the function _printf is receiving
+ * Return: count digit
  */
 int func_digit(va_list list)
 {
