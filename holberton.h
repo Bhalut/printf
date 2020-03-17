@@ -6,11 +6,13 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int func_string(va_list);
+int func_char(va_list);
 
 /**
  * fmt - struct f_index type
  * struct formats - functions for printf
- * @index: index by function
+ * @fmt: index by function
  * @func: pointer to function - funtion print
  */
 typedef struct format
