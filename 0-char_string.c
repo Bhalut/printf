@@ -7,7 +7,7 @@
 
 int func_string(va_list list)
 {
-	int count = 0, i;
+	int i;
 	char *ptr;
 
 	ptr = (va_arg(list, char *));
@@ -35,7 +35,7 @@ int func_char(va_list list)
  * func_percent - print the sing percent
  * Return: 1 as just one of character
  */
-int func_percent(void)
+int func_percent(__attribute__((unused))va_list list )
 {
 	_putchar('%');
 	return (1);

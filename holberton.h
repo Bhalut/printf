@@ -3,12 +3,16 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
 int func_string(va_list);
 int func_char(va_list);
-int func_percent(void);
+int func_percent(va_list);
+int get_match_func(const char *, va_list);
+int func_digit(va_list);
 
 /**
  * struct format - the struct by name fmt
