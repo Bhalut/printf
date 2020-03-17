@@ -20,7 +20,6 @@ int func_string(va_list list)
 			_putchar(null[i]);
 			count += 1;
 		}
-		
 	}
 	else
 	{
@@ -43,15 +42,14 @@ int func_char(va_list list)
 {
 	int count = 0;
 	char c;
-	
+
 	c = (va_arg(list, int));
 	_putchar(c);
 	return (count + 1);
 }
 /**
- *
- *
- *
+ * func_percent - print the sing percent
+ * Return: 1 as just one of character
  */
 int func_percent(void)
 {
