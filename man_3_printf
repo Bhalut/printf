@@ -112,6 +112,30 @@ if the precision is not specified, or is greater than the size of the
 array, the array must contain a terminating null byte.
 .IP
 
+.SH RETURN VALUE
+Upon successful return, these functions return the number of characters
+printed (excluding the null byte used to end output to strings).
+.PP
+If an output error is encountered, a negative value is returned.
+
+.SH EXAMPLE
+.PP
+.EX
+#include <stdio.h>
+#include "holberton.h"
+int
+make_message(const char *format, ...)
+{
+    va_list list;
+    int count = 0;
+
+    va_start(list, format);
+    count =	   get_match_func(format, list);
+    va_end(list);
+    return (count);
+}
+.EE
+.PP
 .SH SEE ALSO
 .BR printf (3),
 .BR putchar (1)
