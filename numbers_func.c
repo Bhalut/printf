@@ -24,21 +24,22 @@ int func_digit(va_list list)
 			m /= 10;
 
 		m = n;
-		count = k;
 		while (k != 0)
 		{
 			for (i = 0; i < k; i++)
 				m /= 10;
 			m %= 10;
 			_putchar(m + '0');
+			count++;
 			k--;
 			m = n;
 		}
 		_putchar(m % 10 + '0');
+		count++;
 	}
 	else
 	{
 		return (-1);
 	}
-	return (count + 1);
+	return (count);
 }
