@@ -1,4 +1,4 @@
-.TH PRINTF 3 "16 March 2019" "GNU" "Linux Programmer's Manual"
+.TH PRINTF 3 "18 March 2019" "GNU" "Linux Programmer's Manual"
 .SH NAME
 printf
 .SH SYNOPSIS
@@ -113,7 +113,8 @@ array, the array must contain a terminating null byte.
 .IP
 
 .SH SEE ALSO
-.BR printf (1)
+.BR printf (3),
+.BR putchar (1)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
