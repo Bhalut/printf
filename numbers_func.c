@@ -8,7 +8,7 @@
 int func_digit(va_list list)
 {
 	unsigned int m;
-	int i = 0, k = 0, n = 0;
+	int i = 0, k = 0, n = 0, count = 0;
 
 	n = va_arg(list, int);
 	if (n <= INT_MAX && n >= INT_MIN)
@@ -23,6 +23,7 @@ int func_digit(va_list list)
 			m /= 10;
 
 		m = n;
+		count = k;
 		while (k != 0)
 		{
 			for (i = 0; i < k; i++)
@@ -38,5 +39,5 @@ int func_digit(va_list list)
 	{
 		return (-1);
 	}
-	return (k);
+	return (count);
 }
