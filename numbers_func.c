@@ -39,5 +39,5 @@ int func_digit(va_list list)
 	{
 		return (-1);
 	}
-	return (count);
+	return (count + 1);
 }
