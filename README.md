@@ -1,3 +1,6 @@
+[![MIT license](https://img.shields.io/github/license/bhalut/Tropical-Puzzle.svg)](https://github.com/Bhalut/Tropical-Puzzle/blob/master/LICENSE)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+
 # PRINTF FUNCTION
 
 This is a a custmom version of the printf fuction, which have the most basic functionalities such as printing a string, a character and also printing an integer number.
@@ -48,9 +51,13 @@ you can go to the clone or downloaded green botton and copy the link that it wil
 
 or use directly this link:
 
- [https://github.com/Bhalut/printf.git](https://github.com/Bhalut/printf.git)
+[https://github.com/Bhalut/printf.git](https://github.com/Bhalut/printf.git)
 
-Go to you terminal and type `$ git clone <link you just copied>` then you will have the repository in your computer
+Go to you terminal and type
+```Bash
+git clone [link you just copied]
+```
+then you will have the repository in your computer
 
 Once you do that you can use this main template and fallow the instructions for compilation
 
@@ -59,7 +66,7 @@ Once you do that you can use this main template and fallow the instructions for 
 - Your code will be compiled this way:
 
 ```Bash
-	gcc -Wall -Werror -Wextra -pedantic *.c
+gcc -Wall -Werror -Wextra -pedantic *.c
 ```
 
 This is a main you can use to tested out the _ptrintf function
@@ -128,7 +135,7 @@ compile and run the executable
 You can open a man page and get more information about it.
 
 ```Bash
-	user@ubuntu:~/c/printf$ **man ./man_3_printf**
+user@ubuntu:~/c/printf$ **man ./man_3_printf**
 ```
 ![Man Page](https://i.imgur.com/FleDcIu.png)
 
