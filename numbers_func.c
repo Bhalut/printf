@@ -17,6 +17,7 @@ int func_digit(va_list list)
 		{
 			n *= -1;
 			_putchar('-');
+			count += 1;
 		}
 		m = n;
 		for (k = 0; (m / 10) > 0; k++)
