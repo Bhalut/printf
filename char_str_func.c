@@ -25,13 +25,11 @@ int func_string(va_list list)
  */
 int func_char(va_list list)
 {
+	
 	char c;
 
 	c = (va_arg(list, int));
-	if (c != 0)
-	{
-		_putchar(c);
-	}
+	_putchar(c);
 	return (1);
 }
 /**
