@@ -11,25 +11,32 @@ int func_digit(va_list list)
 	int i = 0, k = 0, n = 0;
 
 	n = va_arg(list, int);
-	if (n < 0)
+	if (n <= INT_MAX && n >= INT_MIN)
 	{
-		n *= -1;
-		_putchar('-');
-	}
-	m = n;
-	for (k = 0; (m / 10) > 0; k++)
-		m /= 10;
-
-	m = n;
-	while (k != 0)
-	{
-		for (i = 0; i < k; i++)
-			m /= 10;
-		m %= 10;
-		_putchar(m + '0');
-		k--;
+		if (n < 0)
+		{
+			n *= -1;
+			_putchar('-');
+		}
 		m = n;
+		for (k = 0; (m / 10) > 0; k++)
+			m /= 10;
+
+		m = n;
+		while (k != 0)
+		{
+			for (i = 0; i < k; i++)
+				m /= 10;
+			m %= 10;
+			_putchar(m + '0');
+			k--;
+			m = n;
+		}
+		_putchar(m % 10 + '0');
 	}
-	_putchar(m % 10 + '0');
+	else
+	{
+		return (-1);
+	}
 	return (k);
 }
