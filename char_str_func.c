@@ -28,7 +28,10 @@ int func_char(va_list list)
 	char c;
 
 	c = (va_arg(list, int));
-	_putchar(c);
+	if (c != 0)
+	{
+		_putchar(c);
+	}
 	return (1);
 }
 /**
