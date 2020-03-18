@@ -1,10 +1,10 @@
 #include "holberton.h"
+
 /**
  * func_string - print a string
  * @list: the list of arguments the function _printf is receiving
  * Return: the number of characteres of the string
  */
-
 int func_string(va_list list)
 {
 	int i;
@@ -25,13 +25,13 @@ int func_string(va_list list)
  */
 int func_char(va_list list)
 {
-	
 	char c;
 
 	c = (va_arg(list, int));
 	_putchar(c);
 	return (1);
 }
+
 /**
  * func_percent - print the sing percent
  * @list: the list of arguments the funcion id receiving
