@@ -8,24 +8,23 @@
 int func_rot13(va_list list)
 {
 	int i = 0, j = 0, count = 0;
-	char *arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *arr_rot = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char arr1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char arr2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *s;
 
 	s = va_arg(list, char *);
-	for (i = 0; s[i]; i++)
+
+	for (i = 0; s[i] != 0; i++)
 	{
-		for (j = 0; arr[j]; j++)
+		for (j = 0; arr1[j] != 0; j++)
 		{
-			if (s[i] == arr[j])
+			if (s[i] == arr1[j])
 			{
-				s[i] = arr_rot[j];
 				count++;
+				_putchar(arr2[j]);
 				break;
 			}
 		}
-		_putchar(s[i]);
 	}
-
 	return (count);
 }
