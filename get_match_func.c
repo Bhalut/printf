@@ -5,11 +5,9 @@
  * @list: the list of arguments the function _printf is receiving
  * Return: the number of character the function is printing
  */
-int get_match_func(const char *format, va_list list)
+int get_match_func(const char *format, va_list list, st_fmt st_format[])
 {
 	int count = 0, i = 0, j, k = 0, num = 0;
-	fmt st_format[] = {{"c", func_char}, {"s", func_string}, {"d", func_digit},
-		{"i", func_digit}, {"%", func_percent}, {NULL, NULL}};
 
 	for (i = 0; format && format[i] != 0; i++)
 	{
@@ -47,4 +45,8 @@ int get_match_func(const char *format, va_list list)
 	if (format == NULL)
 		return (-1);
 	return (count);
+
+
 }
+
+
