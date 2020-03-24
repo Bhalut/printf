@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		{"o", func_octal_convert},
 		{"x", func_hex_Lowcase_convert},
 		{"X", func_hex_Upcase_convert},
+		{"S", func_stringUppercase},
 		{"r", func_revstr},
 		{"R", func_rot13},
 		{NULL, NULL}};
