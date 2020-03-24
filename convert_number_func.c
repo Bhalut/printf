@@ -7,11 +7,20 @@
 int func_unsig_int(va_list list)
 {
 	unsigned int m, number;
-	int i, k, count;
+	int i, k, count = 0;
 
 	number = va_arg(list, unsigned int);
 	if (number == 0)
+	{
 		_putchar(number + '0');
+		count++;
+	}
+	else if (number > UINT_MAX)
+	{
+		m = number - UINT_MAX - 1;
+		_putchar(m + '0');
+		count++;
+	}
 	else if (number <= UINT_MAX)
 	{
 		m = number;
@@ -29,16 +38,16 @@ int func_unsig_int(va_list list)
 			k--;
 			m = number;
 		}
-		_putchar(m % 10 + '0');
-		count++;
+		_putchar(m % 10 + '0'), count++;
 	}
 	else
 	{
-		return (-1);
+		m = (UINT_MAX + 1) - number;
+		_putchar(m + '0'), count++;
 	}
 	return (count);
 }
- /**
+/**
  * func_binary_convert - Convert a number into binary number
  * @list: is the list of arguments the function _printf is receiving
  * Return: Number of characteres (numbers) printing
@@ -66,7 +75,8 @@ int func_octal_convert(va_list list)
 	return (number_size);
 }
 /**
- * func_hex_Lowcase_convert - Convert a number into hexadecimal Lowercase number
+ * func_hex_Lowcase_convert - Convert a number into hexadecimal
+ * lowercase
  * @list: is the list of arguments the function _printf is receiving
  * Return: Number of characteres (numbers) printing
  */
@@ -89,6 +99,6 @@ int func_hex_Upcase_convert(va_list list)
 	int number_size = 0, number = 0, base = 16, flag = 1;
 
 	number = va_arg(list, unsigned int);
- 	number_size = binary_oct_hex_convert(number, base, flag);
+	number_size = binary_oct_hex_convert(number, base, flag);
 	return (number_size);
 }
