@@ -24,7 +24,13 @@ int func_rot13(va_list list)
 				_putchar(arr2[j]);
 				break;
 			}
+			else if (arr1[j + 1] == 0)
+			{
+				_putchar(s[i]);
+				count++;
+			}
 		}
+
 	}
 	return (count);
 }
