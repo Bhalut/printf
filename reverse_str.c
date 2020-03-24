@@ -21,11 +21,11 @@ int func_revstr(va_list list)
 	return (count);
 }
 /**
- * stringUppercase - Prints a string, when out of range print \x0A
+ * func_stringUppercase - Prints a string, when out of range print \x0A
  * @list: list of arguments the function _printf is sending
  * Return: Number of characteres printing
  */
-int stringUppercase(va_list list)
+int func_stringUppercase(va_list list)
 {
 	char *str1;
 	int i, count = 0;
